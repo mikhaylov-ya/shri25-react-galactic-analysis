@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import  Logo from '../shared/assets/logo.svg';
 import Menu from '../shared/ui/Menu/Menu';
@@ -12,7 +11,6 @@ const routeMenuItems: MenuItem[] = [
   { id: 'history', label: "История" }
 ];
 function App() {
-  const [count, setCount] = useState(0)
   const TITLE_TEXT = 'межгалактическая аналитика';
   return (
     <>

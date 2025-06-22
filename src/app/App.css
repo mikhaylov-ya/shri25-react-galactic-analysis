@@ -18,14 +18,13 @@
 }
 
 .app-wrapper {
-  width: 100%;
   padding: 40px;
   color: black;
 }
 
 .title-wrapper {
   background-color: #CB81FF;
-  font-size: 25px;
+  font-size: 20px;
   align-content: center;
   text-align: center;
   text-transform: uppercase;

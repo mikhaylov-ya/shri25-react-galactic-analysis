@@ -1,0 +1,45 @@
+.history-item {
+  display: flex;
+  gap: 30px;
+  background-color: #CB81FF;
+  justify-content: space-evenly;
+  padding: 15px 10px;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+.history-item:hover {
+  opacity: 0.8;
+}
+
+.history-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+.delete-button {
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  width: 60px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.buttons-wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.opaque {
+  opacity: 0.4;
+}
+
+.history-item-wrapper {
+  display: flex;
+  gap: 30px;
+}

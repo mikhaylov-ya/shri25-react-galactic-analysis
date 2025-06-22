@@ -42,6 +42,17 @@
     align-items: center;
 }
 
+.highlight-item-modal {
+    background-color: #EACDFF!important;
+    width: 400px!important;
+}
+
+.highlights-container-modal {
+    height: fit-content!important;
+    width: fit-content!important;
+    color: black!important;
+}
+
 .item-subtitle {
     font-weight: 400;
     font-size: 16px;

@@ -20,7 +20,7 @@ export default () => {
             changeState('loading');
             try {
             createDownloadableFile(
-                await fetchReport({ size: 1, withErrors: 'on' })
+                await fetchReport({ size: 0.01, withErrors: 'on' })
             );
             changeState('success');
             } catch (e) {

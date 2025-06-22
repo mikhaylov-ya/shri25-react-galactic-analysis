@@ -1,6 +1,5 @@
 import type { ButtonProps } from '.';
 import Spinner from '../../../shared/assets/spinner.svg'
-import Cross from '../../../shared/assets/white-cross.svg'
 import styles from './Button.module.css';
 import cn from 'classnames';
 const COLOR_MAP = {
@@ -9,12 +8,10 @@ const COLOR_MAP = {
   green: '#2AE881',
   purple: '#CB81FF',
   lightgreen: '#D4FAE6',
-
 };
 
 
 export default (props: ButtonProps) => {
-
   const btnStyles = cn({
     [styles['action-button']]: true,
     [styles.disabled]: props.disabled,
@@ -42,7 +39,7 @@ export default (props: ButtonProps) => {
         onClick={props.revert}
         className={styles['revert-button']}
       >
-        <img src={Cross} alt="Close cross" />
+        &times;
       </button>
       }
     </div>

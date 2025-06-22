@@ -3,6 +3,6 @@ export type ButtonProps = {
     label: string;
     disabled?: boolean;
     loading?: boolean;
-    onClick: () => Promise<void>
-    revert?: () => void
+    onClick: (() => Promise<void>) | (() => void);
+    revert?: () => void;
 }

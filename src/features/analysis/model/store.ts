@@ -28,3 +28,8 @@ export const useAnalysisStore = create<AnalysisState>((set) => ({
   setResults: (results) => { set({ results }) },
   setStatus: (status) => set({ status }),
 }));
+
+export const analysisStore = {
+  getState: useAnalysisStore.getState,
+  setState: useAnalysisStore.setState,
+};

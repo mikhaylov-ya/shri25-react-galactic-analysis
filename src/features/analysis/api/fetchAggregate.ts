@@ -42,7 +42,6 @@ export async function fetchAggregate({ file, onChunk }: FetchAggregateParams): P
 
       buffer += decoder.decode(value, { stream: true });
 
-      // Process complete lines (NDJSON)
       let newlineIndex;
       while ((newlineIndex = buffer.indexOf('\n')) >= 0) {
         const line = buffer.slice(0, newlineIndex).trim();
@@ -59,7 +58,6 @@ export async function fetchAggregate({ file, onChunk }: FetchAggregateParams): P
       }
     }
 
-    // Handle trailing partial JSON (if any)
     const final = buffer.trim();
     if (final) {
       try {

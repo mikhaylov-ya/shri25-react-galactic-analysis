@@ -6,14 +6,19 @@ export type HistoryItem = {
   id: string;
   filename: string;
   results: Analysis;
-  status: 'success' | 'failure';
-  date: string;
+  status: 'success' | 'failed';
+  date: Date;
 };
 
 type HistoryState = {
   history: HistoryItem[];
-  addHistory: (item: HistoryItem) => void;
+  addHistory: (item: Omit<HistoryItem, 'id'>) => void;
+  removeHistoryItem: (id: string) => void;
   clearHistory: () => void;
+};
+
+const generateId = (): string => {
+  return `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
 };
 
 export const useHistoryStore = create<HistoryState>()(
@@ -21,7 +26,13 @@ export const useHistoryStore = create<HistoryState>()(
     (set) => ({
       history: [],
       addHistory: (item) =>
-        set((state) => ({ history: [item, ...state.history] })),
+        set((state) => ({
+          history: [{ id: generateId(), ...item }, ...state.history],
+        })),
+      removeHistoryItem: (id) =>
+        set((state) => ({
+          history: state.history.filter((item) => item.id !== id),
+        })),
       clearHistory: () => set({ history: [] }),
     }),
     {
@@ -29,3 +40,8 @@ export const useHistoryStore = create<HistoryState>()(
     }
   )
 );
+
+export const historyStore = {
+  getState: useHistoryStore.getState,
+  setState: useHistoryStore.setState,
+};

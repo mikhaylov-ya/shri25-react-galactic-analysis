@@ -1,5 +1,3 @@
-export default () => {
-    return (
-        <div>Wow history</div>
-    )
-}
+import HistoryPage from "../../features/history/ui";
+
+export default HistoryPage;
