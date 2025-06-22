@@ -1,5 +1,3 @@
-// shared/lib/modal/ModalContext.tsx
-
 import {
   createContext,
   useContext,

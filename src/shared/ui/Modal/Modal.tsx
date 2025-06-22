@@ -1,5 +1,3 @@
-// shared/ui/Modal/index.tsx
-
 import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 
