@@ -1,0 +1,1 @@
+export type GenPageState = "loading" | "initial" | "error" | "success";

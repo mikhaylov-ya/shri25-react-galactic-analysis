@@ -1,0 +1,59 @@
+.disabled:hover {
+    cursor: default;
+    user-select: none;
+    opacity: 0.5!important;
+}
+.disabled {
+    opacity: 0.5!important;
+}
+
+.wrapper {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.action-button {
+  height: 42px;
+  border-radius: 10px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  min-width: 50px;
+}
+
+.revert-button {
+  width: 42px;
+  height: 42px;
+  position: relative;
+  background-color: black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.action-button:focus,
+.action-button:focus-visible {
+  outline: 0.5px auto -webkit-focus-ring-color;
+}
+
+.action-button:hover,
+.revert-button:hover {
+    opacity: 0.8;
+}
+
+.loading-spinner {
+  animation-name: spin;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

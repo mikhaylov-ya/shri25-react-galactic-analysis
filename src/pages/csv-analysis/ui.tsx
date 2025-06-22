@@ -1,1 +1,3 @@
-import { Link } from 'react-router-dom'
+import CSVAnalysisPage from "../../features/analysis/ui";
+
+export default CSVAnalysisPage;

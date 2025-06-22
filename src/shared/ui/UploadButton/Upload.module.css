@@ -1,0 +1,62 @@
+.button-wrapper {
+  color: black;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.uploadButton {
+  height: 42px;
+  border-radius: 10px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  min-width: 50px;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.uploadButton:disabled {
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.uploadButton:hover,
+.clearButton:hover {
+  opacity: 0.8;
+}
+
+.clearButton {
+  font-size: 30px;
+  border-radius: 10px;
+  background: black;
+  width: 42px;
+  height: 42px;
+  align-content: center;
+}
+
+.hiddenInput {
+  display: none;
+}
+
+.loading-spinner {
+  animation-name: spin;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
